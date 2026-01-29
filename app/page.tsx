@@ -11,6 +11,12 @@ export default function Home() {
           </p>
           <div className="flex gap-4">
             <Link
+              href="/pay-fortune"
+              className="inline-block px-6 py-3 bg-neutral-800 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              Fortune Teller 🔮
+            </Link>
+            <Link
               href="/content/cheap"
               className="inline-block px-6 py-3 bg-neutral-800 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >

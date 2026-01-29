@@ -1,3 +1,25 @@
+# AI Fortune Teller with X402 Payments
+
+An AI-powered fortune telling application demonstrating Solana cryptocurrency payments using the X402 protocol. Users pay with crypto to unlock AI-generated fortune readings and premium content.
+
+## Features in This App
+
+- **AI Fortune Telling** - OpenAI-powered personalized fortune readings ($0.05)
+- **Tiered Content** - Multiple pricing levels for different content
+- **Direct Crypto Payments** - Pay with Solana via Coinbase Pay or crypto wallets
+- **No Authentication** - Access content immediately after payment
+
+## Quick Start
+
+```bash
+pnpm install
+cp .env.example .env.local
+# Edit .env.local: Add your OpenAI API key and CDP client key
+pnpm dev
+```
+
+---
+
 # X402 Next.js Solana Template
 
 **A simple Next.js starter template with X402 payment protocol integration for Solana.**

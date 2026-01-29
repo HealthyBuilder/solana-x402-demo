@@ -10,6 +10,13 @@ const cdpClientKey = process.env.NEXT_PUBLIC_CDP_CLIENT_KEY as string
 const x402PaymentMiddleware = paymentMiddleware(
   address,
   {
+    '/pay-fortune': {
+      price: '$0.01',
+      config: {
+        description: 'AI Fortune Telling Service',
+      },
+      network,
+    },
     '/content/cheap': {
       price: '$0.01',
       config: {
@@ -46,13 +53,8 @@ export const middleware = (req: NextRequest) => {
 // Configure which paths the middleware should run on
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (metadata files)
-     */
-    '/((?!_next/static|_next/image|favicon.ico).*)',
-    '/', // Include the root path explicitly
+    '/pay-fortune',
+    '/content/cheap',
+    '/content/expensive',
   ],
 }
